@@ -1,0 +1,98 @@
+# SPDX-FileCopyrightText: 2026 INDUSTRIA DE DISEÑO TEXTIL S.A. (INDITEX S.A.)
+# SPDX-License-Identifier: Apache-2.0
+
+name: code-uv-python-PR-verify
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: code-uv-python-pr-verify-${{ github.repository }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  PROJECT_TYPE: ${{ vars.PROJECT_TYPE }}
+  WORKING_DIRECTORY: ${{ vars.WORKING_DIRECTORY }}
+
+jobs:
+  verify:
+    name: Code / Verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out pull request head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Read governed tool versions
+        id: tool-versions
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -Evq '^[a-zA-Z0-9_-]+ [a-zA-Z0-9._+-]+$' .tool-versions; then
+            echo "::error title=Invalid tool-versions::${WORKING_DIRECTORY}/.tool-versions is malformed."
+            exit 1
+          fi
+          {
+            echo "tool_versions<<EOF"
+            cat .tool-versions
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Set up asdf-managed Python
+        uses: asdf-vm/actions/install@1902764435ca0dd2f3388eea723a4f92a4eb8302 # v4.0.0
+        with:
+          tool_versions: ${{ steps.tool-versions.outputs.tool_versions }}
+
+      - name: Point uv at the asdf-managed interpreter
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "UV_PYTHON=$(asdf where python)/bin/python" >> "$GITHUB_ENV"
+
+      - name: Set up UV
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: '0.9.7'
+          enable-cache: true
+          working-directory: ${{ env.WORKING_DIRECTORY }}
+          cache-dependency-glob: ${{ env.WORKING_DIRECTORY }}/uv.lock
+
+      - name: Verify, test, and build
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          uv lock --check
+
+          case "$PROJECT_TYPE" in
+            single)
+              uv sync --frozen --all-extras --all-groups
+              uv run --no-sync ruff format --check .
+              uv run --no-sync ruff check .
+              uv run --no-sync pyright
+              uv run --no-sync pytest
+              uv build --out-dir dist
+              ;;
+            workspaces)
+              uv sync --frozen --all-extras --all-groups --all-packages
+              uv run --no-sync --all-packages ruff format --check .
+              uv run --no-sync --all-packages ruff check .
+              uv run --no-sync --all-packages pyright
+              uv run --no-sync --all-packages pytest
+              uv build --all-packages --out-dir dist
+              ;;
+            *)
+              echo "::error title=Invalid project type::PROJECT_TYPE must be single or workspaces."
+              exit 1
+              ;;
+          esac

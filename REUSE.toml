@@ -1,0 +1,27 @@
+version = 1
+
+[[annotations]]
+path = [
+    "repolinter.json",
+    "NOTICE",
+    ".github/CODEOWNERS",
+    ".github/dependabot.yml",
+]
+SPDX-FileCopyrightText = "2026 INDUSTRIA DE DISEÑO TEXTIL S.A. (INDITEX S.A.)"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [
+    ".github/inditextech-ci-python.json",
+    ".github/inditextech-ci-sync-manifest.json",
+    ".sync-exclude",
+    "code/.gitignore",
+    "code/.tool-versions",
+    "code/pyproject.toml",
+    "code/src/pypi_ci_testing/__init__.py",
+    "code/src/pypi_ci_testing/py.typed",
+    "code/tests/test_pypi_ci_testing.py",
+    "code/uv.lock"
+]
+SPDX-FileCopyrightText = "2026 INDUSTRIA DE DISEÑO TEXTIL S.A. (INDITEX S.A.)"
+SPDX-License-Identifier = "Apache-2.0"

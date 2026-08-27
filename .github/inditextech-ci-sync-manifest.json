@@ -1,0 +1,49 @@
+{
+  "configuration": {
+    "development_flow": "git-flow",
+    "outputs": [
+      "gh-release",
+      "publish"
+    ],
+    "parameters": {
+      "project_type": "single",
+      "working_directory": "code"
+    }
+  },
+  "creation_year": 2026,
+  "integrity": {
+    "algorithm": "hmac-sha256",
+    "signature": "fa46d797c43e55ad1cd63765caaadc0bc95658a5fb3f22d5f12bcf9480499a0a"
+  },
+  "managed_by": "InditexTech CI governance",
+  "managed_paths": {
+    ".github/ISSUE_TEMPLATE/1-bug.yml": "cd4dad3f32fe707e06324790a2fe2c25829c55566de2b459d744e785b36e1205",
+    ".github/ISSUE_TEMPLATE/2-feature.yml": "ebb92730d6c01641d055f97ac094cbe07f88fac24be9b689ddf26e47e7bda863",
+    ".github/ISSUE_TEMPLATE/3-other.yml": "5a839b39a98704036210dee498146f51bd5a6c057228685680e02004ff063a9a",
+    ".github/ISSUE_TEMPLATE/config.yml": "10e5dee4d49aa9e7792ceb4c986160c61f95da1ba00a64bf06e5f1f636cd17ec",
+    ".github/PULL_REQUEST_TEMPLATE.md": "23a0b0ac79a9020ccac9c013582a01f86e2df2ae7f914673583b9a3368313041",
+    ".github/inditextech-ci-python.json": "55e0eaabcab40c67b73d9d2324266f0d1fd9023fe1a89db63f5ecbd3ca1a3d85",
+    ".github/workflows/code-release_preview.yml": "488425529e24140ea98e2e59e3ed9ed0c892036311c8b07881661eaecda2b8f4",
+    ".github/workflows/code-uv_python-PR_verify.yml": "b6b402468c104290e006febce5421cdcf1b3d3d76f429cfe0c49536720ffe3e1",
+    ".github/workflows/code-uv_python-build_snapshot.yml": "79ee7bf4daa20154da3a85b0b2ed862f82863d038fc5e91caabf5aa10119765e",
+    ".github/workflows/code-uv_python-release-core.yml": "be82601fa7c27893067a04df6aafa0c09bcc01dba35551dde18f2c3ef6746a7a",
+    ".github/workflows/code-uv_python-release.yml": "f1c3a718d99fe05c2203d02bd88328f7c0f7e6bcbf8fbda09dd6461ffc27ed4c",
+    ".github/workflows/code-uv_python-sonarcloud-analysis.yml": "03a981ac84dee367c498b487c0bfd49a54139a0a8df78d2155438a2f144c9aa0",
+    ".github/workflows/codeql.yml": "474fc0350a55bb334070595ec74952fdb3c62debd3e4047af0b9424867a3e310",
+    ".github/workflows/pr-verify.yml": "ed1af7362cdbdbe6a87a82aa89dda6b714c6a9a01eadbedf2d4e896825283095",
+    ".github/workflows/push-verify.yml": "d07deb73fe742c7c4318f608c102b28e480d883d9777928a3d40044af2c54e47",
+    ".github/workflows/sync-to-develop.yml": "9eb4278deb6be51157152068ccd5f1ee91866943ae9225fb9d8512aaacc88708",
+    "CODE_OF_CONDUCT.md": "ce1e7a8f68a7917d48c03f9f7aae5529367f73af0e959276e889d33ea1e8d4ab",
+    "CONTRIBUTING.md": "4e1264ca54a45df44b362c7533f0eba912bfa77b6f561121ae9e5e9d6aa00df3",
+    "SECURITY.md": "0ee7a3356bc3a1c7649e3b7a6a9012b0608011be2b1ff8d106ad02c8950bab25",
+    "code/.tool-versions": "db1e600ba16443b943c545435bbde76267225c50a1c712a930f705b9272b73b0",
+    "repolinter.json": "7a4462a27cf0774948539119f1caa0f21dcaf180b11d090beab57807e26ecfad"
+  },
+  "profile": "python",
+  "repository_id": 1348406453,
+  "schema_version": 2,
+  "source_digests": {
+    "base": "dae66111ad01d1ef5ae71ab0e144944c1c2fc1d9ba4eb46a3eb073890adb0ddb",
+    "python": "c20bddbb912cce5b17fdfb4d23dc9d935dbdda4712bf8489cc5349ef3158a36e"
+  }
+}
