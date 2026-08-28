@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-08-28
+
 ### Added
 
 - Validate the real PyPI publish and GitHub Release lane end-to-end after registering the pypi.org trusted publisher.
@@ -27,6 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.2.0...HEAD
+
+[0.2.0]: https://github.com/InditexTech/pypi-ci-testing/compare/0.1.0...0.2.0
 
 [0.1.0]: https://github.com/InditexTech/pypi-ci-testing/releases/tag/0.1.0
