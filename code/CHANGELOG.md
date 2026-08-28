@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Validate the Python archetype release lane end-to-end: prepare-release, PyPI publish, and GitHub release.
+
 ### Changed
 
 ### Fixed
