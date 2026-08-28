@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Validate the real PyPI publish and GitHub Release lane end-to-end after registering the pypi.org trusted publisher.
+
 ## [0.1.0] - 2026-08-28
 
 ### Added
