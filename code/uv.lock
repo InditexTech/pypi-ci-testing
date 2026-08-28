@@ -157,7 +157,7 @@ wheels = [
 
 [[package]]
 name = "pypi-ci-testing"
-version = "0.2.0"
+version = "0.3.0.dev0"
 source = { editable = "." }
 
 [package.dev-dependencies]
