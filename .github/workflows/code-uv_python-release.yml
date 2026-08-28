@@ -53,8 +53,15 @@ jobs:
           path: dist
           merge-multiple: true
 
+      - name: Validate trusted publishing boundary
+        uses: InditexTech/gh-actions/pypi@977030536dbdb52a7fe2fd5979510fd6a225d035 # v1.1.0
+        with:
+          attestations: 'true'
+          packages-dir: dist
+          skip-existing: 'true'
+
       - name: Publish distributions with trusted publishing
-        uses: InditexTech/gh-actions/pypi@7138f88b2fa8e90318bcb4bf5f9ce6c147b13d2f # v1.0.0
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
         with:
           attestations: 'true'
           packages-dir: dist

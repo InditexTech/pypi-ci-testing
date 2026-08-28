@@ -323,6 +323,7 @@ jobs:
 
             primary_version="$(jq -r '.[0].version' <<< "$releases")"
             echo "RELEASE_VERSION=$primary_version" >> "$GITHUB_ENV"
+            echo "RELEASE_BUMP=$release_bump" >> "$GITHUB_ENV"
           else
             write_records
             releases="$(jq -cs . "$records_file")"
@@ -348,7 +349,11 @@ jobs:
         uses: release-flow/keep-a-changelog-action@74931dec7ecdbfc8e38ac9ae7e8dd84c08db2f32 # v3.0.0
         with:
           command: bump
-          version: ${{ env.RELEASE_VERSION }}
+          # keep-a-changelog's `bump` accepts a semver-inc keyword (major/minor/
+          # patch/...), NOT a concrete version. Passing a concrete number here
+          # aborts every release before the tag/push. Use the same keyword that
+          # drove `uv version --bump` so the changelog and package stay in lockstep.
+          version: ${{ env.RELEASE_BUMP }}
           changelog: ${{ env.WORKING_DIRECTORY }}/CHANGELOG.md
           fail-on-empty-release-notes: false
           keep-unreleased-section: true
