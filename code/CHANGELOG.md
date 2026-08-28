@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-08-28
+
 ### Added
 
 - Validate the Python archetype release lane end-to-end: prepare-release, PyPI publish, and GitHub release.
@@ -20,3 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 ### Fixed
+
+[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.1.0...HEAD
+
+[0.1.0]: https://github.com/InditexTech/pypi-ci-testing/releases/tag/0.1.0
