@@ -359,6 +359,41 @@ jobs:
           keep-unreleased-section: true
           tag-prefix: ""
 
+      - name: Reconcile CHANGELOG version with release
+        if: steps.release-plan.outputs.resume != 'true'
+        env:
+          RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # keep-a-changelog derives the new release number from the CHANGELOG's
+          # own history (a semver-keyword increment), but `uv` is the authoritative
+          # version source and the two can drift: a skipped/resumed release, or a
+          # greenfield changelog that starts one bump behind, leaves the changelog
+          # heading and compare links pointing at a version that never gets tagged
+          # or published. Re-anchor the entry the bump step just wrote to uv's
+          # RELEASE_VERSION so the CHANGELOG, git tag, and package version stay in
+          # lockstep. In steady state (they already agree) this is a no-op, and
+          # after one release the keyword increment lines back up on its own.
+          cl="CHANGELOG.md"
+          cl_ver="$(grep -m1 -E '^## \[[0-9]' "$cl" | sed -E 's/^## \[([^]]+)\].*/\1/')"
+          if [[ -z "$cl_ver" ]]; then
+            echo "::error title=CHANGELOG has no release entry::Expected a '## [X.Y.Z]' heading after the bump step."
+            exit 1
+          fi
+          if [[ "$cl_ver" != "$RELEASE_VERSION" ]]; then
+            echo "::notice title=CHANGELOG version reconciled::keep-a-changelog wrote ${cl_ver}; re-anchoring to uv release ${RELEASE_VERSION}."
+            cl_ver_re="${cl_ver//./\\.}"
+            # 1) the release heading: "## [<cl_ver>] - <date>"
+            sed -i -E "s@^## \[${cl_ver_re}\]( - )@## [${RELEASE_VERSION}]\1@" "$cl"
+            # 2) the Unreleased compare base: "[Unreleased]: .../compare/<cl_ver>...HEAD"
+            sed -i -E "s@^(\[Unreleased\]: .*/compare/)${cl_ver_re}(\.\.\.HEAD)@\1${RELEASE_VERSION}\2@" "$cl"
+            # 3) the new version's own link definition (label + trailing version),
+            #    in either compare (subsequent release) or releases/tag (first) form
+            sed -i -E "s@^\[${cl_ver_re}\]: (.*/)(compare/[^ ]*\.\.\.|releases/tag/)${cl_ver_re}@[${RELEASE_VERSION}]: \1\2${RELEASE_VERSION}@" "$cl"
+          fi
+
       - name: Commit, tag and push release
         if: steps.release-plan.outputs.resume != 'true'
         id: release-commit
