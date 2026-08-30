@@ -13,7 +13,7 @@
   "creation_year": 2026,
   "integrity": {
     "algorithm": "hmac-sha256",
-    "signature": "c866e988c8a12a9c0af789ae973079cfa25ff48d3e65c3b35de7752d1246ea0d"
+    "signature": "d65e11106383e50336b1b71542b9557729606cf360fa7f33e9a4584f8c3758a8"
   },
   "managed_by": "InditexTech CI governance",
   "managed_paths": {
@@ -23,10 +23,10 @@
     ".github/ISSUE_TEMPLATE/config.yml": "10e5dee4d49aa9e7792ceb4c986160c61f95da1ba00a64bf06e5f1f636cd17ec",
     ".github/PULL_REQUEST_TEMPLATE.md": "23a0b0ac79a9020ccac9c013582a01f86e2df2ae7f914673583b9a3368313041",
     ".github/inditextech-ci-python.json": "55e0eaabcab40c67b73d9d2324266f0d1fd9023fe1a89db63f5ecbd3ca1a3d85",
-    ".github/workflows/code-release_preview.yml": "488425529e24140ea98e2e59e3ed9ed0c892036311c8b07881661eaecda2b8f4",
+    ".github/workflows/code-release_preview.yml": "1f144c908ddf44f5834477119bb83350c3674d51ebcbf629536d38f27ff05da9",
     ".github/workflows/code-uv_python-PR_verify.yml": "b6b402468c104290e006febce5421cdcf1b3d3d76f429cfe0c49536720ffe3e1",
-    ".github/workflows/code-uv_python-build_snapshot.yml": "00aa4318a5fcbf915fe8833f72c7de337ff38f550b94c5792497219aa204bb8f",
-    ".github/workflows/code-uv_python-release-core.yml": "974cce3febec2bae4fa930af4ad354dd355d9c0c54e3fbc043760ac066777db5",
+    ".github/workflows/code-uv_python-build_snapshot.yml": "4490915224284297f8105019c29640da002e84da953322e48a9832d6e42e6c76",
+    ".github/workflows/code-uv_python-release-core.yml": "eb35fb7cdb829c0a40834746d829018ab8a7c60d4c5693a976b138b1c79a2afa",
     ".github/workflows/code-uv_python-release.yml": "7f300b690e4de8b5416f4d47d6f2950538601dec37f381e921a39a5ced422a3d",
     ".github/workflows/code-uv_python-sonarcloud-analysis.yml": "03a981ac84dee367c498b487c0bfd49a54139a0a8df78d2155438a2f144c9aa0",
     ".github/workflows/codeql.yml": "474fc0350a55bb334070595ec74952fdb3c62debd3e4047af0b9424867a3e310",
@@ -37,13 +37,13 @@
     "CONTRIBUTING.md": "4e1264ca54a45df44b362c7533f0eba912bfa77b6f561121ae9e5e9d6aa00df3",
     "SECURITY.md": "0ee7a3356bc3a1c7649e3b7a6a9012b0608011be2b1ff8d106ad02c8950bab25",
     "code/.tool-versions": "db1e600ba16443b943c545435bbde76267225c50a1c712a930f705b9272b73b0",
-    "repolinter.json": "7a4462a27cf0774948539119f1caa0f21dcaf180b11d090beab57807e26ecfad"
+    "repolinter.json": "0efb305c47a63f03c488a34906fc2d5471c84145c2ff553f2aacf3a41b92e1a1"
   },
   "profile": "python",
   "repository_id": 1348406453,
   "schema_version": 2,
   "source_digests": {
-    "base": "dae66111ad01d1ef5ae71ab0e144944c1c2fc1d9ba4eb46a3eb073890adb0ddb",
-    "python": "f3f326ed8317ef2020e00f68b6ed6f7ade3cba0224923b227bec9ac28a3fa086"
+    "base": "0a1bf724528d4939131d01ddcdc48a889912316f5e9748a7e574216d6c7bfbdb",
+    "python": "fedce5bfb3d31ba88c7eb7bed00e29f70bec5907f0f273feecacd58c526773ad"
   }
 }
