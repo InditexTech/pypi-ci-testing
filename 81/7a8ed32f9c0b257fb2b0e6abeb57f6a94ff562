@@ -1,0 +1,19 @@
+code/uv.lock
+  s_c1efc9a8f82dbb::t_f1dfe5fc7eb09e 8-9,11,17-18,20-110,116-117,119,125-126,128,134-135,137,143-144,146,175,183,185,191,197,199,205-206,208-224,230-231,233-249
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "817a8ed32f9c0b257fb2b0e6abeb57f6a94ff562",
+  "prompts": {},
+  "sessions": {
+    "s_c1efc9a8f82dbb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "15ae5c45-bbba-41a1-ad0a-e336bfe783bc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
