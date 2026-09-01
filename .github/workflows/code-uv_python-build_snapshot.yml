@@ -72,7 +72,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Set up asdf-managed Python
-        uses: asdf-vm/actions/install@1902764435ca0dd2f3388eea723a4f92a4eb8302 # v4.0.0
+        uses: asdf-vm/actions/install@b7bcd026f18772e44fe1026d729e1611cc435d47 # v4.0.1
         with:
           tool_versions: ${{ steps.tool-versions.outputs.tool_versions }}
 
@@ -108,14 +108,21 @@ jobs:
 
           if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
             if [[ "$PROJECT_TYPE" == "single" ]]; then
-              uv version "$(uv version --short).dev${GITHUB_RUN_ID}"
+              # Strip any existing pre-release suffix before stamping the snapshot.
+              # After a release, the next-dev bump leaves the develop base at
+              # X.Y.Z.dev0; appending a second .dev<run_id> yields X.Y.Z.dev0.dev<id>,
+              # which is invalid PEP 440 (uv rejects it). Replace the suffix, don't append.
+              base="$(uv version --short)"
+              uv version "${base%.dev*}.dev${GITHUB_RUN_ID}"
             else
               packages="$(jq -er '.release.packages[]' "$GITHUB_WORKSPACE/.github/inditextech-ci-python.json")" || {
                 echo "::error title=Invalid descriptor::Could not read .release.packages from the CI descriptor."
                 exit 1
               }
               while IFS= read -r package; do
-                uv version --package "$package" "$(uv version --package "$package" --short).dev${GITHUB_RUN_ID}"
+                # Same suffix-replace as the single-package case above.
+                base="$(uv version --package "$package" --short)"
+                uv version --package "$package" "${base%.dev*}.dev${GITHUB_RUN_ID}"
               done <<< "$packages"
             fi
             uv lock
