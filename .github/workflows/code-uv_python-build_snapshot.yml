@@ -133,7 +133,7 @@ jobs:
               uv sync --frozen --all-extras --all-groups
               uv run --no-sync ruff format --check .
               uv run --no-sync ruff check .
-              uv run --no-sync pyright
+              uv run --no-sync ty check
               uv run --no-sync pytest
               uv build --out-dir dist
               ;;
@@ -141,7 +141,7 @@ jobs:
               uv sync --frozen --all-extras --all-groups --all-packages
               uv run --no-sync --all-packages ruff format --check .
               uv run --no-sync --all-packages ruff check .
-              uv run --no-sync --all-packages pyright
+              uv run --no-sync --all-packages ty check
               uv run --no-sync --all-packages pytest
               uv build --all-packages --out-dir dist
               ;;
