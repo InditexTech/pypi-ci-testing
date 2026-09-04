@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-09-04
+
 ### Fixed
 
 - chore: remove drifted managed files so governance can materialize the golden workflows
@@ -37,7 +39,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.2.0...HEAD
+[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.5.1...HEAD
+
+[0.5.1]: https://github.com/InditexTech/pypi-ci-testing/compare/0.2.0...0.5.1
 
 [0.2.0]: https://github.com/InditexTech/pypi-ci-testing/compare/0.1.0...0.2.0
 
