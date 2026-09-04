@@ -1,6 +1,6 @@
 [project]
 name = "pypi-ci-testing"
-version = "0.5.1"
+version = "0.6.0.dev0"
 description = "Add your description here"
 requires-python = ">=3.12.9"
 dependencies = []
