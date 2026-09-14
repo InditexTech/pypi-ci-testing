@@ -1,5 +1,9 @@
 {
   "configuration": {
+    "branch_roles": {
+      "development_branch": "develop",
+      "release_branch": "main"
+    },
     "development_flow": "git-flow",
     "outputs": [
       "gh-release",
@@ -13,7 +17,7 @@
   "creation_year": 2026,
   "integrity": {
     "algorithm": "hmac-sha256",
-    "signature": "36d4c8b4c4f32a64f3efc716049f29e7cd01d1e497aa4848356319cdad5b8590"
+    "signature": "58924dafbde0563257f50bc64c146d5df16c88c8ffa6c8ef5375b90d88ec6774"
   },
   "managed_by": "InditexTech CI governance",
   "managed_paths": {
@@ -42,6 +46,8 @@
   },
   "managed_variables": {
     "DEVELOPMENT_FLOW": "git-flow",
+    "GIT_FLOW_DEVELOPMENT_BRANCH": "develop",
+    "GIT_FLOW_RELEASE_BRANCH": "main",
     "PROJECT_TYPE": "single",
     "WORKING_DIRECTORY": "code"
   },
