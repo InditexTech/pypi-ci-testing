@@ -1,5 +1,9 @@
 {
   "configuration": {
+    "branch_roles": {
+      "development_branch": "develop",
+      "release_branch": "main"
+    },
     "development_flow": "git-flow",
     "outputs": [
       "gh-release",
@@ -13,7 +17,7 @@
   "creation_year": 2026,
   "integrity": {
     "algorithm": "hmac-sha256",
-    "signature": "062f6ec69406d0fdfa7740e2565271630adf8a79aac8edad8d145ef9c6e2ea32"
+    "signature": "2c3e350e1a905356bfa853a784a6478a4e6432466b0467d8de7d7d6955f5bfda"
   },
   "managed_by": "InditexTech CI governance",
   "managed_paths": {
@@ -30,10 +34,10 @@
     ".github/workflows/code-uv_python-release.yml": "36671f56ecf370dc7ff79d354ac88a366d6f932d7ab108170d566f2c67d3422f",
     ".github/workflows/code-uv_python-sonarcloud-analysis.yml": "6853bf695515c98226168a40f65d9c5c8d91ed20dc65c860d2bdc55c20b9589e",
     ".github/workflows/codeql.yml": "c8362cd28c2795f1fdf30ec44522701de09b5545c923f06d4db10a4cdf88414c",
-    ".github/workflows/pr-verify.yml": "f52295fbfe81578c0a6459d8b384be569933ac78d32fff370932a8dec6943e46",
-    ".github/workflows/push-verify.yml": "fd700ba0ee23fdee9cd7ecf23ad386247f4b621b73cc1946f9ef0eda4ea07086",
-    ".github/workflows/scorecard-analysis.yml": "5bd6da647f708cced5d33411cc27aac7f7ee2be06ae541defea677d70fe80481",
-    ".github/workflows/sync-to-develop.yml": "5c35cf0b946a939d0324b1530a78e319e979f993bd1f0105e64fc4478395d8d7",
+    ".github/workflows/pr-verify.yml": "dfcff10f7b2ff38a112ea4051e79462f4f2c6ad1a82035db3145327e79a34fbb",
+    ".github/workflows/push-verify.yml": "49e6e9c6a7015ea59a2bc831982b2fc4bfd1d5721302f6041170b4a15b7d56e1",
+    ".github/workflows/scorecard-analysis.yml": "b45c2a0f87801796cefb4363d9f1414891b0734bc07de3f50d4a880e22faea10",
+    ".github/workflows/sync-to-develop.yml": "2f80696aeb3aa35a47944535539ca1887a8cea0cf11dd62e1a103497aa395acc",
     "CODE_OF_CONDUCT.md": "ce1e7a8f68a7917d48c03f9f7aae5529367f73af0e959276e889d33ea1e8d4ab",
     "CONTRIBUTING.md": "4e1264ca54a45df44b362c7533f0eba912bfa77b6f561121ae9e5e9d6aa00df3",
     "SECURITY.md": "0ee7a3356bc3a1c7649e3b7a6a9012b0608011be2b1ff8d106ad02c8950bab25",
@@ -42,6 +46,8 @@
   },
   "managed_variables": {
     "DEVELOPMENT_FLOW": "git-flow",
+    "GIT_FLOW_DEVELOPMENT_BRANCH": "develop",
+    "GIT_FLOW_RELEASE_BRANCH": "main",
     "PROJECT_TYPE": "single",
     "WORKING_DIRECTORY": "code"
   },
@@ -50,7 +56,7 @@
   "retained_paths": {},
   "schema_version": 2,
   "source_digests": {
-    "base": "5070fc83e3b1e67ddc4c2463e767ff3d0d364115c6433d2ae0de75afef2e0e63",
+    "base": "77bf82cf50d017f83cb2c98448f5abd89c838e085a747c1af3569034f6b38997",
     "python": "7e5e32bf35038ece219061fdbac4b7f41d2ecbab985bd0e3c5def3d62f2bb866"
   }
 }
