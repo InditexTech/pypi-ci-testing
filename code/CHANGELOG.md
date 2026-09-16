@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-09-11
+
 ## [0.5.1] - 2026-09-04
 
 ### Fixed
@@ -39,7 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.5.1...HEAD
+[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.6.1...HEAD
+
+[0.6.1]: https://github.com/InditexTech/pypi-ci-testing/compare/0.5.1...0.6.1
 
 [0.5.1]: https://github.com/InditexTech/pypi-ci-testing/compare/0.2.0...0.5.1
 
