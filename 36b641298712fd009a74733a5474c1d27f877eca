@@ -1,0 +1,27 @@
+.github/inditextech-ci-sync-manifest.json
+  s_d3029c2620c602::t_0c657d7b59693e 3-6,20,37-40,49-50,59
+.github/workflows/pr-verify.yml
+  s_d3029c2620c602::t_1f2b1ea7d6f329 33,68-76
+.github/workflows/push-verify.yml
+  s_d3029c2620c602::t_525ba05a62be07 34
+.github/workflows/scorecard-analysis.yml
+  s_d3029c2620c602::t_2deeedacbd60aa 17-18,22-52,58-60,82-99
+.github/workflows/sync-to-develop.yml
+  s_d3029c2620c602::t_1c6a5d40f8a77e 26-27,29-63,69,77,80,96,100,105-106,152,162-172,194-201,203,207-233
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "36b641298712fd009a74733a5474c1d27f877eca",
+  "prompts": {},
+  "sessions": {
+    "s_d3029c2620c602": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "s_d3029c2620c602",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
