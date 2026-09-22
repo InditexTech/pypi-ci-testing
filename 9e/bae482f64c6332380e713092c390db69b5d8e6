@@ -1,0 +1,19 @@
+code/uv.lock
+  s_ac1a8a8a10c614::t_83999cb0b6ee88 167,169,190,197,199,229,231,233-249
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9ebae482f64c6332380e713092c390db69b5d8e6",
+  "prompts": {},
+  "sessions": {
+    "s_ac1a8a8a10c614": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f455bd84effePVDv9G35CWPwaJ",
+        "model": "zai-org/GLM-5.3-Flash"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
