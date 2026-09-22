@@ -1,0 +1,27 @@
+.github/workflows/code-release_preview.yml
+  s_ac1a8a8a10c614::t_d0494b6e6cee6b 63-74
+.github/workflows/code-uv_python-PR_verify.yml
+  s_ac1a8a8a10c614::t_88406e369f0955 52-63
+.github/workflows/code-uv_python-build_snapshot.yml
+  s_ac1a8a8a10c614::t_29299fb80464ab 76-87
+.github/workflows/code-uv_python-release-core.yml
+  s_ac1a8a8a10c614::t_8e033efc8bcab2 147-158,566-577,668-679
+.github/workflows/code-uv_python-sonarcloud-analysis.yml
+  s_ac1a8a8a10c614::t_22b7878d13d1a2 77-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "53a76872a30d4a43b9042bcd63a9f724e11a47b7",
+  "prompts": {},
+  "sessions": {
+    "s_ac1a8a8a10c614": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f455bd84effePVDv9G35CWPwaJ",
+        "model": "zai-org/GLM-5.3-Flash"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
