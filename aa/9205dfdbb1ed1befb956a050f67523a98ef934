@@ -1,0 +1,19 @@
+.github/inditextech-ci-sync-manifest.json
+  s_ac1a8a8a10c614::t_aaf75f3eb059c3 20,34,60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "aa9205dfdbb1ed1befb956a050f67523a98ef934",
+  "prompts": {},
+  "sessions": {
+    "s_ac1a8a8a10c614": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f455bd84effePVDv9G35CWPwaJ",
+        "model": "zai-org/GLM-5.3-Flash"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
