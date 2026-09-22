@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- CI: group `github/codeql-action` dependabot bumps so `init`/`analyze` move together.
+
+### Changed
+
+- Enable scheduled dependency updates for the canary and its workflows.
 ## [0.7.1] - 2026-09-16
 
 ## [0.6.1] - 2026-09-11
