@@ -17,6 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - CI: group `github/codeql-action` dependabot bumps so `init`/`analyze` move together.
 
+### Dependencies
+
+- Bump dev deps: ruff 0.16.8 and ty 0.0.82 with a matching `uv.lock` regeneration
+  (the dependabot pip ecosystem does not update the lockfile).
+
 ### Changed
 
 - Enable scheduled dependency updates for the canary and its workflows.
