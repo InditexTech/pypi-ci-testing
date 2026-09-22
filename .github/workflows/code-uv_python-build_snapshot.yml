@@ -176,7 +176,7 @@ jobs:
           merge-multiple: true
 
       - name: Validate trusted publishing boundary
-        uses: InditexTech/gh-actions/pypi@977030536dbdb52a7fe2fd5979510fd6a225d035 # v1.1.0
+        uses: InditexTech/gh-actions/pypi@1cc068f5c8abd2a1aa4cbfc45b42cbaa8aff35cd # v1.1.3
         with:
           packages-dir: dist
           repository-url: 'https://test.pypi.org/legacy/'
