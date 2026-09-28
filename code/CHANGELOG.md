@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- CI: stop dependabot from editing governed workflows (prevents managed-file drift freeze).
 
 - CI: group `github/codeql-action` dependabot bumps so `init`/`analyze` move together.
 
