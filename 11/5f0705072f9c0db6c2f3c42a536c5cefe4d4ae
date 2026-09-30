@@ -1,0 +1,21 @@
+.github/workflows/probe-caller.yml
+  s_ed6f24705e8d3b::t_8bde24f0a0f821 1-2,8-13
+.github/workflows/probe-reusable.yml
+  s_ed6f24705e8d3b::t_9efc0d57caffef 1-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "115f0705072f9c0db6c2f3c42a536c5cefe4d4ae",
+  "prompts": {},
+  "sessions": {
+    "s_ed6f24705e8d3b": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "s_ed6f24705e8d3b",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
