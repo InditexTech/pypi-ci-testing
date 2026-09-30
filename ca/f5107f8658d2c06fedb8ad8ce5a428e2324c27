@@ -1,0 +1,29 @@
+.github/workflows/code-release_preview.yml
+  s_a34d8b3bc0c90d::t_aa7b946a7f37e2 77
+.github/workflows/code-uv_python-PR_verify.yml
+  s_a34d8b3bc0c90d::t_5e166b2194ac59 66
+.github/workflows/code-uv_python-build_snapshot.yml
+  s_a34d8b3bc0c90d::t_5c3c67123102db 90,179
+.github/workflows/code-uv_python-release-core.yml
+  s_a34d8b3bc0c90d::t_2dad520fbdac59 161,568,658
+.github/workflows/code-uv_python-sonarcloud-analysis.yml
+  s_a34d8b3bc0c90d::t_b6203af3a4b869 91,168
+.github/workflows/codeql.yml
+  s_a34d8b3bc0c90d::t_9a8326ed3ab3bc 96,102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "caf5107f8658d2c06fedb8ad8ce5a428e2324c27",
+  "prompts": {},
+  "sessions": {
+    "s_a34d8b3bc0c90d": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "s_a34d8b3bc0c90d",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
