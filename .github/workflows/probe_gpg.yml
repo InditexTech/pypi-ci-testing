@@ -1,0 +1,20 @@
+name: probe-gpg
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: probe
+        env:
+          K: ${{ secrets.CI_GPG_SECRET_KEY }}
+          P: ${{ secrets.CI_GPG_SECRET_KEY_PASSWORD }}
+          PK: ${{ secrets.CI_GPG_KEY_ID }}
+          APP: ${{ secrets.APP_PRIVATE_KEY }}
+        run: |
+          [ -n "$K" ] && echo "KEY: present(${#K})" || echo "KEY: EMPTY"
+          [ -n "$P" ] && echo "PASS: present(${#P})" || echo "PASS: EMPTY"
+          [ -n "$PK" ] && echo "KEYID: present(${#PK})" || echo "KEYID: present(${#PK})" || echo "KEYID: EMPTY"
+          [ -n "$APP" ] && echo "APP: present(${#APP})" || echo "APP: EMPTY"
