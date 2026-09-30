@@ -17,7 +17,7 @@
   "creation_year": 2026,
   "integrity": {
     "algorithm": "hmac-sha256",
-    "signature": "825621fc434b0f100e5dc9c230a6c443368cc01a4d4c47b2584db180e102e85b"
+    "signature": "8c7a72b54b7163044f5990f6568de3377e7d6315c54fcf4f2b326b0d3e9c25da"
   },
   "managed_by": "InditexTech CI governance",
   "managed_paths": {
@@ -27,12 +27,12 @@
     ".github/ISSUE_TEMPLATE/config.yml": "10e5dee4d49aa9e7792ceb4c986160c61f95da1ba00a64bf06e5f1f636cd17ec",
     ".github/PULL_REQUEST_TEMPLATE.md": "23a0b0ac79a9020ccac9c013582a01f86e2df2ae7f914673583b9a3368313041",
     ".github/inditextech-ci-python.json": "55e0eaabcab40c67b73d9d2324266f0d1fd9023fe1a89db63f5ecbd3ca1a3d85",
-    ".github/workflows/code-release_preview.yml": "f4961cf85cd105cb5b117b4b4c3a5052dde43e60eaa95962be0e86574d865e36",
-    ".github/workflows/code-uv_python-PR_verify.yml": "6599e44faae065cd648e3c04d4b7ae1c9e7258d353d6aedee8e0ba2b012f6413",
-    ".github/workflows/code-uv_python-build_snapshot.yml": "b068f19460295239dea8a7715bc0a985c22d975714c3d14c3c382ddc7996f089",
-    ".github/workflows/code-uv_python-release-core.yml": "3dd96fc45508ee7063464ba44ac8f15934729bc64d727ed271fdc7e395b0ec40",
+    ".github/workflows/code-release_preview.yml": "6c010e0b27ef65ab7a2ca645d23b899cf0af13a07d8205a3e565a8504d504e57",
+    ".github/workflows/code-uv_python-PR_verify.yml": "6442a79095386d61d8c6146c2dc9d2a0169b085c7eb4ff8d48c03740a50de20a",
+    ".github/workflows/code-uv_python-build_snapshot.yml": "0f45854f790f923eb2fa6af031fc1107c5497b1fa2609a35f91b5ce295cc07c6",
+    ".github/workflows/code-uv_python-release-core.yml": "7537ffcfeb5e6447b87cc3bfd67d5c5f6ad9e7c2aa078737895012a334099c41",
     ".github/workflows/code-uv_python-release.yml": "71fc5808f6c23fd5f74a066654a4d3ab46f656d7e2f96535784876a5dce44d63",
-    ".github/workflows/code-uv_python-sonarcloud-analysis.yml": "6853bf695515c98226168a40f65d9c5c8d91ed20dc65c860d2bdc55c20b9589e",
+    ".github/workflows/code-uv_python-sonarcloud-analysis.yml": "d68e2a872b9718944bae32533f141246d3bd9a9ef396bc4558eaca4300f3f651",
     ".github/workflows/codeql.yml": "c8362cd28c2795f1fdf30ec44522701de09b5545c923f06d4db10a4cdf88414c",
     ".github/workflows/pr-verify.yml": "5628d1d93c09cb761602fcfc3857c325e2dc542cadc159a1edad58d1818d0de0",
     ".github/workflows/push-verify.yml": "643f6905fa30284af4a2eabac752293b2e785a5e82449bb6d97950624386829c",
@@ -57,6 +57,6 @@
   "schema_version": 2,
   "source_digests": {
     "base": "d0ba4f054c8e0a0d6c828d02718efc01251f7897cfcbe864d3c76ef304dc4a13",
-    "python": "d8ac9ee212fb4d3cddce396421a8724303cb501fc1b426773d1737759bcb0457"
+    "python": "eda874ef4c6c314c247a2582eaa4022ba7a47a1da5cadd08728c0164bae0d9c7"
   }
 }
