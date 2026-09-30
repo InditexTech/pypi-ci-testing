@@ -5,9 +5,58 @@ on:
 permissions:
   contents: read
 jobs:
-  relay:
-    uses: ./.github/workflows/probe-reusable.yml
-    secrets:
-      APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
-      CI_GPG_SECRET_KEY: ${{ secrets.CI_GPG_SECRET_KEY }}
-      CI_GPG_SECRET_KEY_PASSWORD: ${{ secrets.CI_GPG_SECRET_KEY_PASSWORD }}
+  baseline:
+    name: current pin (ca5ff3f)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Read governed tool versions
+        id: tool-versions
+        working-directory: code
+        run: |
+          { echo "tool_versions<<EOF"; cat code/.tool-versions; echo "EOF"; } >> "$GITHUB_OUTPUT"
+
+      - name: Restore asdf toolchain cache (baseline, raw key)
+        id: retry-baseline
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.asdf/downloads
+            ~/.asdf/installs/python
+          key: python-asdf-${{ runner.os }}-${{ runner.arch }}-${{ steps.tool-versions.outputs.tool_versions }}
+          restore-keys: |
+            python-asdf-${{ runner.os }}-${{ runner.arch }}-
+
+      - name: Report baseline cache verdict
+        run: |
+          if [ "${{ steps.retry-baseline.outputs.cache-hit }}" = "true" ]; then
+            echo "BASELINE: HIT"
+          else
+            echo "BASELINE: MISS"
+          fi
+
+  digest:
+    name: fix branch pin (d8de476)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up governed Python toolchain (fix, hashed key)
+        uses: InditexTech/gh-actions/python-toolchain@d8de476cf4bda997df868af6e56bb1696293700f
+        with:
+          tool-versions: ${{ hashFiles('code/.tool-versions') }}
+          asdf-version: '0.18.0'
+          working-directory: code
+
+      - name: Report digest cache verdict
+        run: |
+          echo "DIGEST: step output above shows Cache hit/Cache not found"
