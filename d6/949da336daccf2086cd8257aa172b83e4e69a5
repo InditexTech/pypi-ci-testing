@@ -1,0 +1,19 @@
+.github/workflows/scorecard-analysis.yml
+  s_8b05f62bdb23a5::t_11b4b9152340cf 69,101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d6949da336daccf2086cd8257aa172b83e4e69a5",
+  "prompts": {},
+  "sessions": {
+    "s_8b05f62bdb23a5": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "s_8b05f62bdb23a5",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
