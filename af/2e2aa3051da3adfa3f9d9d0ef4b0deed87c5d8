@@ -1,0 +1,19 @@
+.github/workflows/probe-caller.yml
+  s_1d0e652a670f4a::t_5a983977dad86c 8-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "af2e2aa3051da3adfa3f9d9d0ef4b0deed87c5d8",
+  "prompts": {},
+  "sessions": {
+    "s_1d0e652a670f4a": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "s_1d0e652a670f4a",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
