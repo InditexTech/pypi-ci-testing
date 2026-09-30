@@ -13,7 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-09-30
+
 ### Changed
+
 - CI: stop dependabot from editing governed workflows (prevents managed-file drift freeze).
 
 - CI: group `github/codeql-action` dependabot bumps so `init`/`analyze` move together.
@@ -57,7 +60,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.7.1...HEAD
+[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.8.1...HEAD
+
+[0.8.1]: https://github.com/InditexTech/pypi-ci-testing/compare/0.7.1...0.8.1
 
 [0.7.1]: https://github.com/InditexTech/pypi-ci-testing/compare/0.6.1...0.7.1
 
