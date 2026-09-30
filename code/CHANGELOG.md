@@ -13,13 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-09-30
+
 ### Changed
 
+- CI: stop dependabot from editing governed workflows (prevents managed-file drift freeze).
+
 - CI: group `github/codeql-action` dependabot bumps so `init`/`analyze` move together.
+
+### Dependencies
+
+- Bump dev deps: ruff 0.16.8 and ty 0.0.82 with a matching `uv.lock` regeneration
+  (the dependabot pip ecosystem does not update the lockfile).
 
 ### Changed
 
 - Enable scheduled dependency updates for the canary and its workflows.
+
 ## [0.7.1] - 2026-09-16
 
 ## [0.6.1] - 2026-09-11
@@ -50,7 +60,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.7.1...HEAD
+[Unreleased]: https://github.com/InditexTech/pypi-ci-testing/compare/0.8.1...HEAD
+
+[0.8.1]: https://github.com/InditexTech/pypi-ci-testing/compare/0.7.1...0.8.1
 
 [0.7.1]: https://github.com/InditexTech/pypi-ci-testing/compare/0.6.1...0.7.1
 

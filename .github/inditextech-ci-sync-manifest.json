@@ -17,7 +17,7 @@
   "creation_year": 2026,
   "integrity": {
     "algorithm": "hmac-sha256",
-    "signature": "2c3e350e1a905356bfa853a784a6478a4e6432466b0467d8de7d7d6955f5bfda"
+    "signature": "825621fc434b0f100e5dc9c230a6c443368cc01a4d4c47b2584db180e102e85b"
   },
   "managed_by": "InditexTech CI governance",
   "managed_paths": {
@@ -31,11 +31,11 @@
     ".github/workflows/code-uv_python-PR_verify.yml": "6599e44faae065cd648e3c04d4b7ae1c9e7258d353d6aedee8e0ba2b012f6413",
     ".github/workflows/code-uv_python-build_snapshot.yml": "b068f19460295239dea8a7715bc0a985c22d975714c3d14c3c382ddc7996f089",
     ".github/workflows/code-uv_python-release-core.yml": "3dd96fc45508ee7063464ba44ac8f15934729bc64d727ed271fdc7e395b0ec40",
-    ".github/workflows/code-uv_python-release.yml": "36671f56ecf370dc7ff79d354ac88a366d6f932d7ab108170d566f2c67d3422f",
+    ".github/workflows/code-uv_python-release.yml": "71fc5808f6c23fd5f74a066654a4d3ab46f656d7e2f96535784876a5dce44d63",
     ".github/workflows/code-uv_python-sonarcloud-analysis.yml": "6853bf695515c98226168a40f65d9c5c8d91ed20dc65c860d2bdc55c20b9589e",
     ".github/workflows/codeql.yml": "c8362cd28c2795f1fdf30ec44522701de09b5545c923f06d4db10a4cdf88414c",
-    ".github/workflows/pr-verify.yml": "dfcff10f7b2ff38a112ea4051e79462f4f2c6ad1a82035db3145327e79a34fbb",
-    ".github/workflows/push-verify.yml": "49e6e9c6a7015ea59a2bc831982b2fc4bfd1d5721302f6041170b4a15b7d56e1",
+    ".github/workflows/pr-verify.yml": "5628d1d93c09cb761602fcfc3857c325e2dc542cadc159a1edad58d1818d0de0",
+    ".github/workflows/push-verify.yml": "643f6905fa30284af4a2eabac752293b2e785a5e82449bb6d97950624386829c",
     ".github/workflows/scorecard-analysis.yml": "b45c2a0f87801796cefb4363d9f1414891b0734bc07de3f50d4a880e22faea10",
     ".github/workflows/sync-to-develop.yml": "2f80696aeb3aa35a47944535539ca1887a8cea0cf11dd62e1a103497aa395acc",
     "CODE_OF_CONDUCT.md": "ce1e7a8f68a7917d48c03f9f7aae5529367f73af0e959276e889d33ea1e8d4ab",
@@ -56,7 +56,7 @@
   "retained_paths": {},
   "schema_version": 2,
   "source_digests": {
-    "base": "77bf82cf50d017f83cb2c98448f5abd89c838e085a747c1af3569034f6b38997",
-    "python": "7e5e32bf35038ece219061fdbac4b7f41d2ecbab985bd0e3c5def3d62f2bb866"
+    "base": "d0ba4f054c8e0a0d6c828d02718efc01251f7897cfcbe864d3c76ef304dc4a13",
+    "python": "d8ac9ee212fb4d3cddce396421a8724303cb501fc1b426773d1737759bcb0457"
   }
 }
