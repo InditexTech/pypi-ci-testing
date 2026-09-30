@@ -56,6 +56,40 @@ jobs:
           persist-credentials: false
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
 
+      - name: Resolve governed project type
+        shell: bash
+        run: |
+          set -euo pipefail
+          descriptor="$GITHUB_WORKSPACE/.github/inditextech-ci-python.json"
+          if [[ ! -f "$descriptor" ]]; then
+            echo "::error title=Missing descriptor::.github/inditextech-ci-python.json not found."
+            exit 1
+          fi
+          project_type="$(jq -r '.project_type // empty' "$descriptor")"
+          case "$project_type" in
+            single|monorepo|workspaces) ;;
+            *)
+              echo "::error title=Invalid project type::Descriptor .project_type must be single, monorepo, or workspaces."
+              exit 1
+              ;;
+          esac
+          if [[ "$project_type" == "monorepo" ]]; then
+            project_type="workspaces"
+          fi
+          workdir="${WORKING_DIRECTORY:-$(jq -r '.working_directory // empty' "$descriptor")}"
+          case "$workdir" in
+            ""|/*|..|../*|*/..|*/../*)
+              echo "::error title=Invalid working directory::WORKING_DIRECTORY must be a non-empty relative repository path." >&2
+              exit 1
+              ;;
+          esac
+          if [[ ! -d "$workdir" ]]; then
+            echo "::error title=Missing working directory::'${workdir}' is not a directory in this checkout." >&2
+            exit 1
+          fi
+          echo "PROJECT_TYPE=$project_type" >> "$GITHUB_ENV"
+          echo "WORKING_DIRECTORY=${workdir}" >> "$GITHUB_ENV"
+
       - name: Read governed tool versions
         id: tool-versions
         working-directory: ${{ env.WORKING_DIRECTORY }}
@@ -69,30 +103,15 @@ jobs:
           {
             echo "tool_versions<<EOF"
             cat .tool-versions
-            echo
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Set up asdf-managed Python
-        uses: asdf-vm/actions/install@b7bcd026f18772e44fe1026d729e1611cc435d47 # v4.0.1
+      - name: Set up governed Python toolchain
+        uses: InditexTech/gh-actions/python-toolchain@ca5ff3f7d69ee5a3cb026ac5585d680f083d8f7b
         with:
-          tool_versions: ${{ steps.tool-versions.outputs.tool_versions }}
-          asdf_version: ${{ env.ASDF_BRANCH_VERSION }}
-
-      - name: Point uv at the asdf-managed interpreter
-        working-directory: ${{ env.WORKING_DIRECTORY }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "UV_PYTHON=$(asdf where python)/bin/python" >> "$GITHUB_ENV"
-
-      - name: Set up UV
-        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
-        with:
-          version: '0.9.7'
-          enable-cache: true
+          tool-versions: ${{ steps.tool-versions.outputs.tool_versions }}
+          asdf-version: ${{ env.ASDF_BRANCH_VERSION }}
           working-directory: ${{ env.WORKING_DIRECTORY }}
-          cache-dependency-glob: ${{ env.WORKING_DIRECTORY }}/uv.lock
 
       - name: Verify and build distributions
         id: build
@@ -176,7 +195,7 @@ jobs:
           merge-multiple: true
 
       - name: Validate trusted publishing boundary
-        uses: InditexTech/gh-actions/pypi@977030536dbdb52a7fe2fd5979510fd6a225d035 # v1.1.0
+        uses: InditexTech/gh-actions/pypi@8a719baa6e8d514ccdfe87cff2baae9007a8b168 # v1.1.5
         with:
           packages-dir: dist
           repository-url: 'https://test.pypi.org/legacy/'
