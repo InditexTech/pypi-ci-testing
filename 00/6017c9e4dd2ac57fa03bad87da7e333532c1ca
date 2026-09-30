@@ -1,0 +1,19 @@
+.github/workflows/probe_gpg.yml
+  s_fc231fde183486::t_7fddd6a00e2343 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "006017c9e4dd2ac57fa03bad87da7e333532c1ca",
+  "prompts": {},
+  "sessions": {
+    "s_fc231fde183486": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "s_fc231fde183486",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
