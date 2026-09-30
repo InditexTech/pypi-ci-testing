@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Restore the governed workflow files to the sync-manifest recorded revisions.
+- CI: restore the governed release caller to its recorded digest so SYNC can forward the organization GPG secrets.
 
 
 ## [0.8.1] - 2026-09-30
