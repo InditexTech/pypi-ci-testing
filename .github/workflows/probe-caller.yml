@@ -1,0 +1,13 @@
+# TEMPORARY probe — delete with branch probe-gpg (not governed content)
+name: probe-caller
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  relay:
+    uses: ./.github/workflows/probe-reusable.yml
+    secrets:
+      APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+      CI_GPG_SECRET_KEY: ${{ secrets.CI_GPG_SECRET_KEY }}
+      CI_GPG_SECRET_KEY_PASSWORD: ${{ secrets.CI_GPG_SECRET_KEY_PASSWORD }}

@@ -1,0 +1,36 @@
+# TEMPORARY probe — delete with branch probe-gpg (not governed content)
+name: probe-reusable
+on:
+  workflow_call:
+    secrets:
+      APP_PRIVATE_KEY:
+        required: true
+      CI_GPG_SECRET_KEY:
+        required: false
+      CI_GPG_SECRET_KEY_PASSWORD:
+        required: false
+permissions:
+  contents: read
+jobs:
+  sign:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Configure release git signing
+        uses: InditexTech/gh-actions/configure-release-git@ca5ff3f7d69ee5a3cb026ac5585d680f083d8f7b
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          gpg-secret-key: ${{ secrets.CI_GPG_SECRET_KEY }}
+          gpg-passphrase: ${{ secrets.CI_GPG_SECRET_KEY_PASSWORD }}
+
+      - name: Prove signed commit and tag
+        run: |
+          git commit --allow-empty -m "probe: signed commit"
+          git log -1 --show-signature
+          git tag -a probe-signed-tag -m "probe signed tag"
+          git tag -v probe-signed-tag 2>&1 | head -3
+          git verify-commit HEAD && echo "COMMIT SIGNATURE: VALID"
