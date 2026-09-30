@@ -1,0 +1,19 @@
+.github/workflows/code-uv_python-release.yml
+  s_0e6c01275bd3cc::t_232fe30d40dc2f 61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1b94ba9abf2fab5d887f7cfd6148762dfef79a8d",
+  "prompts": {},
+  "sessions": {
+    "s_0e6c01275bd3cc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a8444734-1810-4534-94d7-0872a3ed77dd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
