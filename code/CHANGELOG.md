@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The release version is computed from the latest reachable `vX.Y.Z` tag by the governed `release-version` action; the declared development version no longer sets it.
+
 ## [0.8.4] - 2026-10-01
 
 ## [0.8.3] - 2026-09-30
