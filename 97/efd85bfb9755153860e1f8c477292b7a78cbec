@@ -1,0 +1,23 @@
+code/CHANGELOG.md
+  s_852e28bae8f438::t_93b1ace703836d 16-19
+code/pyproject.toml
+  s_852e28bae8f438::t_68f4a7bdfa3883 3
+code/uv.lock
+  s_852e28bae8f438::t_11d8b545367f08 151
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "97efd85bfb9755153860e1f8c477292b7a78cbec",
+  "prompts": {},
+  "sessions": {
+    "s_852e28bae8f438": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "49f82c94-ae20-4aa4-a95e-a39aed343455",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Ivan Alvarez Sabin <ivanasabi@ext.inditex.com>"
+    }
+  }
+}
