@@ -17,7 +17,7 @@
   "creation_year": 2026,
   "integrity": {
     "algorithm": "hmac-sha256",
-    "signature": "e06a1c8477389fcebcc1fcab9c5ca82201828d3d4dc16eaaeb1d42d51ab70751"
+    "signature": "8c2a4222a2ce38a57388b67eb859562e8a667e32d6e77e59305c0ce8d8683d97"
   },
   "managed_by": "InditexTech CI governance",
   "managed_paths": {
@@ -27,7 +27,7 @@
     ".github/ISSUE_TEMPLATE/config.yml": "10e5dee4d49aa9e7792ceb4c986160c61f95da1ba00a64bf06e5f1f636cd17ec",
     ".github/PULL_REQUEST_TEMPLATE.md": "23a0b0ac79a9020ccac9c013582a01f86e2df2ae7f914673583b9a3368313041",
     ".github/inditextech-ci-python.json": "55e0eaabcab40c67b73d9d2324266f0d1fd9023fe1a89db63f5ecbd3ca1a3d85",
-    ".github/workflows/code-release_preview.yml": "f051548b3d82c943ff566f43e3e6da2ee6221ac768c723bb7798de9128d40d33",
+    ".github/workflows/code-release_preview.yml": "9006d833c978e5fbd3dbad97cf69a4f84da26b86831dc65728210fe87922f2d8",
     ".github/workflows/code-uv_python-PR_verify.yml": "dec4108c0f466546a191e6834cddc9e89a8b44de98c006dfa9ece4dac881c9b4",
     ".github/workflows/code-uv_python-build_snapshot.yml": "1dfd945b2f3956094fb9c7d78d290a03323c805ef90ebaad7e15c2bdd832567f",
     ".github/workflows/code-uv_python-release-core.yml": "d1dec9376a784a5625d24d4ee3e04a890817277e65fac4a05cbcbcf2d0be741e",
@@ -57,6 +57,6 @@
   "schema_version": 2,
   "source_digests": {
     "base": "d0ba4f054c8e0a0d6c828d02718efc01251f7897cfcbe864d3c76ef304dc4a13",
-    "python": "4a6e94b07ab8ac00c12b10340fcb996845556fdb2e9239a04299280480140e04"
+    "python": "75b6939b20e69448f7a2863efb9c2a8790b7c84c1ca13390d6a3b07a9082178a"
   }
 }
