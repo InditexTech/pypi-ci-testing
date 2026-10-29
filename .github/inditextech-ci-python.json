@@ -1,4 +1,5 @@
 {
+  "dependency_ecosystem": "pip",
   "project_type": "single",
   "schema_version": 1,
   "working_directory": "code"
