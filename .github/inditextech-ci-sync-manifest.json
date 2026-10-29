@@ -10,6 +10,7 @@
       "publish"
     ],
     "parameters": {
+      "dependency_ecosystem": "pip",
       "project_type": "single",
       "working_directory": "code"
     }
@@ -17,7 +18,7 @@
   "creation_year": 2026,
   "integrity": {
     "algorithm": "hmac-sha256",
-    "signature": "8c2a4222a2ce38a57388b67eb859562e8a667e32d6e77e59305c0ce8d8683d97"
+    "signature": "ceb92ee99d5b72fa2edd8f930c1e1c97ef01b11af48540fe46ae18c2e86a1970"
   },
   "managed_by": "InditexTech CI governance",
   "managed_paths": {
@@ -26,7 +27,8 @@
     ".github/ISSUE_TEMPLATE/3-other.yml": "5a839b39a98704036210dee498146f51bd5a6c057228685680e02004ff063a9a",
     ".github/ISSUE_TEMPLATE/config.yml": "10e5dee4d49aa9e7792ceb4c986160c61f95da1ba00a64bf06e5f1f636cd17ec",
     ".github/PULL_REQUEST_TEMPLATE.md": "23a0b0ac79a9020ccac9c013582a01f86e2df2ae7f914673583b9a3368313041",
-    ".github/inditextech-ci-python.json": "55e0eaabcab40c67b73d9d2324266f0d1fd9023fe1a89db63f5ecbd3ca1a3d85",
+    ".github/dependabot.yml": "3961e22d59814823c51825fafc3076e30ef0d5fe70589b96f01e48c83bf32c58",
+    ".github/inditextech-ci-python.json": "887446dc65d2367ad0ef9a80188975f82605ffcce8578adcbd51ab5563c98ecd",
     ".github/workflows/code-release_preview.yml": "9006d833c978e5fbd3dbad97cf69a4f84da26b86831dc65728210fe87922f2d8",
     ".github/workflows/code-uv_python-PR_verify.yml": "dec4108c0f466546a191e6834cddc9e89a8b44de98c006dfa9ece4dac881c9b4",
     ".github/workflows/code-uv_python-build_snapshot.yml": "1dfd945b2f3956094fb9c7d78d290a03323c805ef90ebaad7e15c2bdd832567f",
